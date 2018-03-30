@@ -17,7 +17,7 @@ int queuedJobs;/*Number of jobs in the queue*/
 int queueLength;/*The length of the queue*/
 int activeThreads;/*The number of threads that haven't finished running*/
 int EXIT;/*Indicates whether scheduler is done or not*/
-//char** results;/*The table where the resulting string will be written*/
+
 pointerToJob* jobsQueue;
 pthread_mutex_t jobsQueueMtx;
 pthread_mutex_t jobsRanMtx;
