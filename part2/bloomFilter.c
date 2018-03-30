@@ -17,7 +17,7 @@ struct bloom_filter
 };
 
 
-void bloom_filterInit(pointerToBloomFilter *bloomF,/*int hashes, int lengthInBits,*/ int n, double p)
+void bloom_filterInit(pointerToBloomFilter *bloomF, int n, double p)
 {/*Bloom filetr initilisation*/
 	(*bloomF)=malloc(sizeof(struct bloom_filter));
 	/*This code section decides how many hush functions the bloom filter should have, based on the number of elements it expects*/
