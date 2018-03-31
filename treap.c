@@ -39,14 +39,12 @@ int treapInit(pointerToTreapNode* treapRoot)
 
 int treapEmpty(pointerToTreapNode treapRoot)
 {
-	//printf("In treap empty\n");
 	return
 	((treapRoot==NULL)||((treapRoot->keyWord==NULL)&&(treapRoot->left==NULL)&&(treapRoot->right==NULL)&&(treapRoot->priority==0)));
 }
 
 void insertAChildTreap(pointerToTreapNode* treapRoot, char* ngram)
 {/*Check if you should insert in root level*/
-	//printf("Came to insert\n");
 	if(((*treapRoot)->keyWord==NULL)||(strcmp((*treapRoot)->keyWord,ngram)==0))
 	{/*Initialised/empty root node*/
 		(*treapRoot)->keyWord=malloc((strlen(ngram)+1)*sizeof(char));
