@@ -19,6 +19,7 @@ The structure can complete 3 tasks:
 * Add N-gram (A)
 * Delete N-gram (D)
 * Search N-grams in text (Q)
+* Top-K Ngrams (F) (Only used on [Part 2](part2) and [Part 3](part3) of the project)
 #### Add Task
 This task configures the trie structure to add a new n-gram. If the n-gram exists already, the structure remains unaltered. This task does not produce any exit or output to the screen. <br>
 Instruction: A n-gram
@@ -29,7 +30,7 @@ Instruction: D n-gram
 This task searches for all the appearing n-grams in a block of text. Its result is a line with all the appearing n-grams, in order of appearance, separated by the "|" character. If no n-gram is found, a "-1" is printed instead. <br>
 Instruction: Q block_of_text
 #### F Signifier
-The F instruction signifies the end of a batch of A, D and Q instructions. At the current version of the project it has no functional value. However it is later used for a Top-K query of the most common results in the queries of one batch.
+The F instruction signifies the end of a batch of A, D and Q instructions. At the first version of the project it has no functional value. However it is later used for a Top-K query of the most common results in the queries of one batch.
 
 ### Trie Node
 Each nnode represents a word of an n-gram. The structure contains the word, either by array or pointer depending the version of the trie node, an array of children trie nodes, the following word on an n-gram, the size of the array, the occupied number of slots on the array and a flag which turns true when the node is a final node of an n-gram. <br>
